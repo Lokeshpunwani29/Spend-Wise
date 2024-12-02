@@ -1,30 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Tracker</title>
+    <title>Spend Wise</title>
+    <link rel="stylesheet" href="output.css">
 </head>
+
 <body>
     <nav>
         <div class="logo">
-            <h1>Expense Tracker.</h1>
-            <h3>Track $$$ in Minutes..</h3>
+            <h1>Spend-Wise</h1>
+            <h5>Take control of your finances</h5>
         </div>
     </nav>
-        <main>
-            <div class="ExpenseList">
-
+    <main>
+        <div class="expenseList">
+            <div class="listheader">
+                <h2>Split</h2>
+                <button class="addExpense">Add Expense</button>
             </div>
+            <ul class="listSplitCards">
 
-            <div class="GroupBalances">
+                <li class="cardSplitCont">
+                    <div class="cardSplit">
+                        <div class="fullDate">
+                            <div class="month">DEC</div>
+                            <div class="date">03</div>
+                        </div>
+                        <div class="spendTitle">Trip</div>
+                        <div class="youPaid">
+                            you paid
+                            <div class="paidAmount">INR 500.00</div>
+                        </div>
+                        <div class="youLent">
+                            you lent
+                            <div class="lentAmount">INR 400.00</div>
+                        </div>
+                        <div class="deleteBtn">
+                            <button>DELETE</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="cardSplitCont">
+                    <div class="cardSplit">
+                        <div class="fullDate">
+                            <div class="month">DEC</div>
+                            <div class="date">03</div>
+                        </div>
+                        <div class="spendTitle">Trip</div>
+                        <div class="youPaid">
+                            you paid
+                            <div class="paidAmount">INR 500.00</div>
+                        </div>
+                        <div class="youLent">
+                            you lent
+                            <div class="lentAmount">INR 400.00</div>
+                        </div>
+                        <div class="deleteBtn">
+                            <button>DELETE</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
+        <div class="GroupBalances">
+            <h3>GROUP BALANCES</h3>
+            <ul class="cardNameList">
+                <div class="cardName">
+                    <li class="cardNameCont">
+                        <div class="Logoname">
+                            <img src="" alt="">
+                        </div>
+                        <div class="memberName">Lokesh Punwani</div>
+                        <div class="memberAmount">+INR 400</div>
+                </div>
+                </li>
+                <li class="cardNameCont">
+                    <div class="cardName">
+                        <div class="Logoname">
+                            <img src="" alt="">
+                        </div>
+                        <div class="memberName">Devansh Kadam</div>
+                        <div class="memberAmount">-INR 100</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="addExpenseForm">
+            <div class="formHead">
+                <h3>Add an Expense</h3>
             </div>
+            <form action="#">
+                <label for="ExpenseTitle" aria-placeholder="Enter a description"></label>
+                <input type="text" id="ExpenseTitle" placeholder="Enter a description">
+                <div class="amtBox">
+                    <span class="INR">INR</span>
+                    <input type="text" id="ExpenseAmt" placeholder="0.00">
+                </div>
+                <input type="text" id="totalMembers" placeholder="Count of Members">
+            </form>
+        </div>
 
-            <div class="AddExpense">
-                
-            </div>
-
-        </main>
+    </main>
 </body>
+
 </html>
