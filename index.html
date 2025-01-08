@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spend Wise</title>
     <link rel="stylesheet" href="output.css">
+    <script src="basic.js"></script>
 </head>
 
 <body>
@@ -15,97 +16,102 @@
             <h5>Take control of your finances</h5>
         </div>
     </nav>
-    <main>
-        <div class="expenseList">
-            <div class="listheader">
-                <h2>Split</h2>
-                <button class="addExpense">Add Expense</button>
-            </div>
-            <ul class="listSplitCards">
 
-                <li class="cardSplitCont">
-                    <div class="cardSplit">
-                        <div class="fullDate">
-                            <div class="month">DEC</div>
-                            <div class="date">03</div>
-                        </div>
-                        <div class="spendTitle">Trip</div>
-                        <div class="youPaid">
-                            you paid
-                            <div class="paidAmount">INR 500.00</div>
-                        </div>
-                        <div class="youLent">
-                            you lent
-                            <div class="lentAmount">INR 400.00</div>
-                        </div>
-                        <div class="deleteBtn">
-                            <button>DELETE</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="cardSplitCont">
-                    <div class="cardSplit">
-                        <div class="fullDate">
-                            <div class="month">DEC</div>
-                            <div class="date">03</div>
-                        </div>
-                        <div class="spendTitle">Trip</div>
-                        <div class="youPaid">
-                            you paid
-                            <div class="paidAmount">INR 500.00</div>
-                        </div>
-                        <div class="youLent">
-                            you lent
-                            <div class="lentAmount">INR 400.00</div>
-                        </div>
-                        <div class="deleteBtn">
-                            <button>DELETE</button>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+    <div class="expenseSection">
+        <div class="listheader">
+            <h2>Overall Expense: &#8377;<span class="overallExpense">25000</span></h2>
+            <h2 class="splitHeading">&lt;Split List&gt;</h2>
+            <h2>You Lent: &#8377;<span class="totalLent">22500</span></h2>
+
         </div>
-
-        <div class="GroupBalances">
-            <h3>GROUP BALANCES</h3>
-            <ul class="cardNameList">
-                <div class="cardName">
-                    <li class="cardNameCont">
-                        <div class="Logoname">
-                            <img src="" alt="">
-                        </div>
-                        <div class="memberName">Lokesh Punwani</div>
-                        <div class="memberAmount">+INR 400</div>
+        <div class="cardCont">
+            <div class="card">
+                <div class="upperCard">
+                    <div class="line">Expense Description: <span class="description">Pizza Party</span></div>
+                    <div class="line">Number of Persons: <span class="numberOfPersons">10</span></div>
+                    <div class="line">Total Expense: &#8377;<span class="totalExpense">25000</span></div>
+                    <div class="line">Expense per Person: &#8377;<span class="expensePerPerson">2500</span></div>
+                    <div class="line">You Lent: &#8377;<span class="youLent">22500</span></div>
                 </div>
-                </li>
-                <li class="cardNameCont">
-                    <div class="cardName">
-                        <div class="Logoname">
-                            <img src="" alt="">
-                        </div>
-                        <div class="memberName">Devansh Kadam</div>
-                        <div class="memberAmount">-INR 100</div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="addExpenseForm">
-            <div class="formHead">
-                <h3>Add an Expense</h3>
-            </div>
-            <form action="#">
-                <label for="ExpenseTitle" aria-placeholder="Enter a description"></label>
-                <input type="text" id="ExpenseTitle" placeholder="Enter a description">
-                <div class="amtBox">
-                    <span class="INR">INR</span>
-                    <input type="text" id="ExpenseAmt" placeholder="0.00">
+                <div class="button">
+                    <button class="delete">Delete</button>
+                    <button class="edit">Edit</button>
                 </div>
-                <input type="text" id="totalMembers" placeholder="Count of Members">
-            </form>
+
+            </div>
+        
+        </div>
+    </div>
+
+    <div class="addLogo">
+        <svg xmlns="http://www.w3.org/2000/svg" height="52" width="52" rotate=""
+            viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+            <path fill="#985ee4"
+                d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM200 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z" />
+        </svg>
+    </div>
+
+    <footer>
+        Spend-Wise&#169; || LP Technologies &trade;
+    </footer>
+
+
+    <div class="addExpenseForm">
+        <div class="formHead">
+            <h3>Add an Expense</h3>
+        </div>
+        <form class="ExpenseForm" action="#">
+
+            <div class="formBlock">
+                <label class="label">Expense Description: </label>
+                <input id="ExpDes" type="text" placeholder="Like Trip, Party.">
+            </div>
+
+            <div class="formBlock">
+                <label class="label">Number of Persons: </label>
+                <input id="NoOfPer" type="text" placeholder="10">
+            </div>
+
+            <div class="formBlock">
+                <label class="label">Total Expense INR:</label>
+                <input id="exp" type="text" placeholder="2000">
+            </div>
+        </form>
+
+        <div class="submitBtn">
+            <button class="submit">Submit</button>
         </div>
 
-    </main>
+    </div>
+
+    <div class="EditExpenseForm">
+        <div class="formHead">
+            <h3>Add an Expense</h3>
+        </div>
+        <form class="UpdateExpenseForm" action="#">
+
+            <div class="formBlock">
+                <label class="label">Expense Description: </label>
+                <input type="text" placeholder="Like Trip, Party.">
+            </div>
+
+            <div class="formBlock">
+                <label class="label">Number of Persons: </label>
+                <input type="text" placeholder="10">
+            </div>
+
+            <div class="formBlock">
+                <label class="label">Total Expense INR:</label>
+                <input type="text" placeholder="2000">
+            </div>
+        </form>
+
+        <div class="updateBtn">
+            <button class="update">Update</button>
+        </div>
+
+    </div>
+
 </body>
 
 </html>
