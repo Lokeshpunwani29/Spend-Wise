@@ -10,8 +10,8 @@
     --gray: rgba(192, 192, 192, 0.48);
 }
 * {
-    padding: auto;
-    margin: auto;
+    padding: 0;
+    margin: 0;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -24,8 +24,8 @@ body{
 nav {
     color: var(--white);
     display: flex;
-    height: 9vh;
-    padding: 5px;
+    height: 7vh;
+    padding: 15px;
     align-items: center;
     justify-content: center;
     background-color: var(--purple);
@@ -51,13 +51,14 @@ nav {
     margin-top: 3vh;
     width: 80vw;
     height: 75vh;
+    margin: 3vh auto;
     border: 1px solid rgb(178, 172, 172);
     border-radius: 18px;
     overflow: hidden;
 
 
     .listheader {
-        padding: 12px;
+        padding: 12px 24px;
         display: flex;
         height: 7%;
         justify-content: space-between;
@@ -71,15 +72,17 @@ nav {
         width: 98%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        // align-items: center;
         gap: 20px;
         overflow-y: scroll;
         .card {
-            margin-bottom: 2%;
+            margin: 1%;
             border: 0.5px solid grey;
+            line-height: 35px;
+            padding: 25px 14px;
             background-color: rgba(221, 213, 213, 0.199);
             border-radius: 16px;
-            height: 275px;
+            height: 250px;
             width: 300px;
 
             .upperCard {
@@ -126,13 +129,19 @@ nav {
     cursor: pointer;
 }
 
+.cancelLogo{
+    position: fixed;
+    bottom: 45px;
+    right: 40px;
+    cursor: pointer;
+}
 
 .addExpenseForm{
     z-index: 10;
     width: 35vw;
     height: 20vh;
     position: fixed;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 20px;
     top: 50%;
@@ -194,7 +203,7 @@ nav {
     width: 35vw;
     height: 20vh;
     position: fixed;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 20px;
     top: 50%;
